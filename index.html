@@ -2,72 +2,99 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autorisation de participation – Programme Alpha</title>
-
 <style>
 body {
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#f2f4f8;
-    color:#1a1a1a;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #1f2937;
+}
+
+.header {
+    background-color: #0f172a;
+    color: white;
+    padding: 18px 40px;
+    font-size: 14px;
+}
+
+.header small {
+    display: block;
+    opacity: 0.7;
 }
 
 .container {
-    max-width:700px;
-    margin:60px auto;
-    background:#ffffff;
-    padding:40px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    border-radius:6px;
+    max-width: 720px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 h1 {
-    font-size:22px;
-    margin-bottom:20px;
+    margin-top: 0;
+    font-size: 24px;
 }
 
-p {
-    line-height:1.6;
-    margin-bottom:18px;
-    font-size:15px;
+.meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 25px;
 }
 
 .box {
-    background:#f7f9fc;
-    padding:20px;
-    border-left:4px solid #2c3e50;
-    margin-bottom:25px;
-    font-size:14px;
+    background: #f1f5f9;
+    padding: 18px;
+    border-left: 4px solid #334155;
+    margin: 25px 0;
 }
 
 button {
-    background:#1f2a44;
-    color:#ffffff;
-    border:none;
-    padding:14px 28px;
-    font-size:14px;
-    cursor:pointer;
-    border-radius:4px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 button:hover {
-    background:#111a2e;
+    background: #0f172a;
 }
 
 .footer {
-    margin-top:40px;
-    font-size:12px;
-    color:#666;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.secure {
+    text-align: right;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
 
+<div class="header">
+    Ministère de l’Intérieur<br>
+    <small>Direction des Procédures Numériques – Accès sécurisé</small>
+</div>
+
 <div class="container">
 
 <h1>Autorisation de participation – Programme Alpha</h1>
+
+<div class="meta">
+Référence dossier : <span id="ref"></span><br>
+Horodatage : <span id="time"></span>
+</div>
 
 <p>
 Dans le cadre d’une procédure administrative liée à une enquête en cours,
@@ -84,7 +111,7 @@ Cette participation implique :
 </div>
 
 <p>
-Aucune donnée bancaire ne sera demandée sur cette page.
+Aucune donnée bancaire ne sera demandée sur cette page.  
 Votre participation est volontaire et peut être interrompue à tout moment.
 </p>
 
@@ -94,6 +121,10 @@ En cliquant ci-dessous, vous confirmez accepter les conditions de participation.
 
 <button onclick="confirmParticipation()">Je confirme ma participation</button>
 
+<div class="secure">
+Connexion sécurisée – Protocole HTTPS actif
+</div>
+
 <div class="footer">
 Programme Alpha – Cellule numérique<br>
 contact@alpha-game.fr
@@ -102,9 +133,22 @@ contact@alpha-game.fr
 </div>
 
 <script>
-function confirmParticipation() {
-    alert("Votre autorisation a été enregistrée.");
+function generateReference() {
+    const random = Math.floor(1000 + Math.random() * 9000);
+    const date = new Date();
+    return "PA-" + date.getFullYear() + "-" + random;
 }
+
+function confirmParticipation() {
+    document.querySelector("button").disabled = true;
+    document.querySelector("button").innerText = "Autorisation enregistrée";
+    setTimeout(function() {
+        alert("Votre autorisation a été enregistrée. Vous recevrez les instructions par voie numérique.");
+    }, 800);
+}
+
+document.getElementById("ref").innerText = generateReference();
+document.getElementById("time").innerText = new Date().toLocaleString("fr-FR");
 </script>
 
 </body>
