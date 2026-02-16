@@ -3,171 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autorisation de participation – Programme Alpha</title>
+<title>Mobilisation citoyenne – Disparition Lina Vassal</title>
 
 <style>
 body {
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f1f3f6;
-    color:#1e1e1e;
+   margin:0;
+   font-family: Arial, Helvetica, sans-serif;
+   background:#f1f3f6;
+   color:#1e1e1e;
 }
 
-.header {
-    background:#2b2f3a;
-    color:white;
-    padding:18px 30px;
-    font-size:14px;
-    letter-spacing:1px;
+/* HEADER */
+.rf-header {
+   background: #0f172a;
+   color: white;
+   padding: 24px 40px 18px 40px;
+   position: relative;
 }
 
+.rf-flag {
+   height: 4px;
+   width: 100%;
+   background: linear-gradient(to right,
+       #002395 0%, #002395 33%,
+       #ffffff 33%, #ffffff 66%,
+       #ed2939 66%, #ed2939 100%);
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.rf-title {
+   font-size: 14px;
+   letter-spacing: 2px;
+   font-weight: bold;
+   margin-bottom: 6px;
+}
+
+.rf-lines {
+   font-size: 12px;
+   line-height: 1.6;
+   opacity: 0.9;
+}
+
+.rf-access {
+   position: absolute;
+   right: 40px;
+   top: 22px;
+   font-size: 11px;
+   letter-spacing: 1px;
+   opacity: 0.75;
+}
+
+/* CONTENT */
 .container {
-    max-width:800px;
-    margin:60px auto;
-    background:white;
-    padding:50px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.08);
-    border-radius:6px;
+   max-width:800px;
+   margin:60px auto;
+   background:white;
+   padding:50px;
+   box-shadow:0 8px 30px rgba(0,0,0,0.08);
+   border-radius:6px;
 }
 
 h1 { margin-top:0; font-size:24px; }
 
 .meta {
-    font-size:12px;
-    color:#666;
-    margin-bottom:30px;
+   font-size:12px;
+   color:#666;
+   margin-bottom:30px;
 }
 
-.box {
-    background:#f5f7fa;
-    padding:20px;
-    border-left:4px solid #2b2f3a;
-    margin:25px 0;
+.alert-box {
+   background:#fff3f3;
+   border-left:4px solid #b91c1c;
+   padding:18px;
+   margin:25px 0;
 }
 
 button {
-    background:#2b2f3a;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    font-size:14px;
-    cursor:pointer;
-    margin-top:20px;
+   background:#0f172a;
+   color:white;
+   border:none;
+   padding:14px 28px;
+   font-size:14px;
+   cursor:pointer;
+   margin-top:20px;
 }
 
-button:hover { background:#1f232c; }
+button:hover { background:#111827; }
 
 .footer {
-    margin-top:50px;
-    font-size:12px;
-    color:#777;
-    line-height:1.6;
-}
-
-/* CINEMATIC */
-.cinematic {
-    position: relative;
-    height: 120px;
-}
-
-.fade {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:black;
-    animation: fadeout 0.8s forwards;
-}
-
-@keyframes fadeout {
-    from { opacity:1; }
-    to { opacity:0; }
+   margin-top:50px;
+   font-size:12px;
+   color:#777;
+   line-height:1.6;
 }
 
 /* PROGRESS */
 .progress-bar {
-    width:100%;
-    height:8px;
-    background:#e0e0e0;
-    border-radius:4px;
-    margin-top:20px;
+   width:100%;
+   height:8px;
+   background:#e0e0e0;
+   border-radius:4px;
+   margin-top:20px;
 }
 
 .progress {
-    height:8px;
-    width:0;
-    background:#1d3557;
-    border-radius:4px;
+   height:8px;
+   width:0;
+   background:#1d3557;
+   border-radius:4px;
 }
 
 .log {
-    margin-top:20px;
-    font-family: monospace;
-    font-size:13px;
-    background:#f8f9fa;
-    padding:15px;
-    border-radius:4px;
+   margin-top:20px;
+   font-family: monospace;
+   font-size:13px;
+   background:#f8f9fa;
+   padding:15px;
+   border-radius:4px;
 }
 
 .box-tech {
-    background:#f1f3f5;
-    padding:20px;
-    margin-top:20px;
-    font-size:14px;
+   background:#f1f3f5;
+   padding:20px;
+   margin-top:20px;
+   font-size:14px;
 }
 
 .hash {
-    font-family: monospace;
-    font-size:12px;
-    word-break: break-all;
+   font-family: monospace;
+   font-size:12px;
+   word-break: break-all;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
-PROGRAMME ALPHA — Cellule numérique sécurisée
+<div class="rf-header">
+   <div class="rf-flag"></div>
+   <div class="rf-title">RÉPUBLIQUE FRANÇAISE</div>
+   <div class="rf-lines">
+       Préfecture des Bouches-du-Rhône – Coordination territoriale<br>
+       Direction Interrégionale de la Police Judiciaire – Groupe Enquête 13<br>
+       Dispositif exceptionnel de mobilisation citoyenne
+   </div>
+   <div class="rf-access">
+       Accès restreint – Niveau 2<br>
+       Session surveillée
+   </div>
 </div>
 
 <div class="container">
 
-<h1>Autorisation de participation</h1>
+<h1>Mobilisation citoyenne – Disparition inquiétante</h1>
 
 <div class="meta">
-Référence dossier : ALP-2026-<span id="ref"></span><br>
-Date : <span id="date"></span>
+Dossier n° : 2026-13-<span id="ref"></span><br>
+Mise à jour : <span id="date"></span>
+</div>
+
+<div class="alert-box">
+<strong>Personne recherchée :</strong><br>
+Lina Vassal, 20 ans<br>
+Signalée disparue à Cassis (13260) depuis 4 jours.
 </div>
 
 <p>
-Dans le cadre d’une procédure administrative liée à une enquête en cours, 
-vous êtes invité(e) à autoriser l’accès à un environnement numérique sécurisé.
-</p>
-
-<div class="box">
-Cette participation implique :
-<ul>
-<li>La réception d’informations numériques progressives</li>
-<li>L’analyse de documents et supports transmis</li>
-<li>Une implication personnelle dans un cadre narratif immersif</li>
-</ul>
-</div>
-
-<p>
-Aucune donnée bancaire ne sera demandée sur cette page. 
-Votre participation est volontaire et peut être interrompue à tout moment.
+Dans un contexte de forte tension médiatique et d'événements récents non élucidés
+dans le secteur des Calanques, les autorités ont activé un dispositif exceptionnel
+de mobilisation citoyenne.
 </p>
 
 <p>
-En cliquant ci-dessous, vous confirmez accepter les conditions de participation.
+Votre participation volontaire consiste à intégrer un environnement numérique
+sécurisé permettant l'analyse d'éléments utiles à l'enquête.
 </p>
 
-<button onclick="confirmParticipation()">Autoriser l’accès sécurisé</button>
+<p>
+En cliquant ci-dessous, vous acceptez d'être intégré(e) au dispositif
+et de recevoir les éléments transmis par la cellule d'enquête.
+</p>
+
+<button onclick="confirmParticipation()">Intégrer le dispositif sécurisé</button>
 
 <div class="footer">
-Programme Alpha – Cellule numérique<br>
-contact@alpha-game.fr<br><br>
-Conformément au Règlement (UE) 2016/679 (RGPD), 
-les informations sont utilisées exclusivement dans le cadre de la procédure en cours.
+Préfecture des Bouches-du-Rhône – Dispositif temporaire d'appui numérique<br>
+contact@alpha-game.fr
 </div>
 
 </div>
@@ -180,115 +203,55 @@ Math.floor(100000 + Math.random() * 900000);
 document.getElementById("date").innerText =
 new Date().toLocaleString("fr-FR");
 
-function randomFromArray(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-}
-
-function generateFrenchIP() {
-    const ranges = ["51","82","90","91","92","93","176","178","213"];
-    return randomFromArray(ranges) + "." +
-           Math.floor(Math.random()*255) + "." +
-           Math.floor(Math.random()*255) + "." +
-           Math.floor(Math.random()*255);
-}
-
-function generateSHA() {
-    const chars = "abcdef0123456789";
-    let hash = "";
-    for (let i = 0; i < 64; i++) {
-        hash += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return hash;
-}
-
-function generateSessionID() {
-    return "SID-" + Math.random().toString(36).substring(2,15).toUpperCase();
-}
-
 function confirmParticipation() {
 
-    const container = document.querySelector(".container");
+   const container = document.querySelector(".container");
 
-    container.innerHTML = `
-        <div class="cinematic">
-            <div class="fade"></div>
-        </div>
-    `;
+   container.innerHTML = `
+       <h2>Initialisation du protocole d'intégration…</h2>
+       <div class="progress-bar"><div class="progress"></div></div>
+       <div id="log" class="log"></div>
+   `;
 
-    setTimeout(() => {
+   const progress = document.querySelector(".progress");
+   const log = document.getElementById("log");
 
-        container.innerHTML = `
-            <h2>Initialisation du protocole Alpha…</h2>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            <div id="log" class="log"></div>
-        `;
+   const steps = [
+       "Connexion au nœud régional sécurisé – Marseille (FR-13)…",
+       "Négociation TLS 1.3…",
+       "Vérification certificat serveur…",
+       "Transmission registre central…",
+       "Validation intégration dispositif…"
+   ];
 
-        const progress = document.querySelector(".progress");
-        const log = document.getElementById("log");
+   let width = 0;
+   let stepIndex = 0;
 
-        const steps = [
-            "Connexion au nœud sécurisé régional – Marseille (FR-13)…",
-            "Latence mesurée : " + (80 + Math.floor(Math.random()*220)) + " ms",
-            "Négociation TLS 1.3 – AES-256-GCM…",
-            "Vérification certificat serveur (RSA-4096)…",
-            "Transmission vers serveur central…",
-            "Génération empreinte SHA-256…",
-            "Écriture registre d’audit national…"
-        ];
+   const interval = setInterval(function() {
 
-        let width = 0;
-        let stepIndex = 0;
+       width += 5;
+       progress.style.width = width + "%";
 
-        const interval = setInterval(function() {
+       if (stepIndex < steps.length && width > (stepIndex+1)*20) {
+           log.innerHTML += `<div>✔ ${steps[stepIndex]}</div>`;
+           stepIndex++;
+       }
 
-            width += Math.random()*7;
-            progress.style.width = width + "%";
+       if (width >= 100) {
+           clearInterval(interval);
 
-            if (stepIndex < steps.length && width > (stepIndex+1)*14) {
-                log.innerHTML += `<div>✔ ${steps[stepIndex]}</div>`;
-                stepIndex++;
-            }
+           container.innerHTML = `
+               <h2 style="color:#1d3557;">Intégration validée</h2>
+               <p>Votre participation au dispositif relatif à la disparition de Lina Vassal
+               a été enregistrée.</p>
+               <p>Vous serez contacté(e) via l’environnement numérique dédié.</p>
+               <p style="font-size:13px;color:#555;">
+               Toute activité est consignée.
+               </p>
+           `;
+       }
 
-            if (width >= 100) {
-                clearInterval(interval);
-
-                const ip = generateFrenchIP();
-                const sha = generateSHA();
-                const session = generateSessionID();
-                const ref = "PA-" + new Date().getFullYear() + "-" +
-                            Math.floor(Math.random()*9000+1000);
-                const timestamp = new Date().toISOString();
-
-                container.innerHTML = `
-                    <h2 style="color:#1d3557;">Autorisation validée</h2>
-
-                    <p>Votre participation a été enregistrée dans le registre sécurisé.</p>
-
-                    <div class="box-tech">
-                        <p><strong>Référence dossier :</strong> ${ref}</p>
-                        <p><strong>Session ID :</strong> ${session}</p>
-                        <p><strong>Horodatage ISO :</strong> ${timestamp}</p>
-                        <p><strong>Adresse IP détectée :</strong> ${ip}</p>
-                        <p><strong>Empreinte SHA-256 :</strong><br>
-                        <span class="hash">${sha}</span></p>
-                        <p><strong>Chiffrement :</strong> TLS 1.3 – AES-256-GCM</p>
-                        <p><strong>Journal :</strong> Entrée consignée – ID ${Math.floor(Math.random()*100000)}</p>
-                    </div>
-
-                    <hr style="margin:30px 0;">
-
-                    <p style="font-size:14px;color:#444;">
-                    Votre accès au protocole Alpha est désormais actif.<br>
-                    Toute activité est consignée.
-                    </p>
-                `;
-            }
-
-        }, 180);
-
-    }, 800);
+   }, 180);
 }
 
 </script>
